@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f6f7f2">
+	<title>Fieldnote | Student Portal</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+		<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20M8 7h8M8 10h6"/></symbol>
+		<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+		<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+		<symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-5 5"/></symbol>
+		<symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></symbol>
+		<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+		<symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+		<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+		<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+		<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+		<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+		<symbol id="i-close" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
+	</svg>
+
+	<div class="app-shell">
+		<aside class="sidebar" id="sidebar">
+			<a class="brand" href="#dashboard" aria-label="Fieldnote home">
+				<span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+				<span>fieldnote<span class="brand-period">.</span></span>
+			</a>
+
+			<div class="school-switcher">
+				<div class="school-monogram">N</div>
+				<div class="school-copy"><strong>Northwood College</strong><span>2026 / 2027</span></div>
+				<span class="switcher-caret">⌄</span>
+			</div>
+
+			<p class="nav-label">LEARNING</p>
+			<nav class="primary-nav" aria-label="Main navigation">
+				<button class="nav-link is-active" data-view="dashboard"><svg><use href="#i-grid"/></svg><span>Overview</span></button>
+				<button class="nav-link" data-view="courses"><svg><use href="#i-book"/></svg><span>My courses</span><span class="nav-count">4</span></button>
+				<button class="nav-link" data-view="schedule"><svg><use href="#i-calendar"/></svg><span>Schedule</span></button>
+				<button class="nav-link" data-view="assignments"><svg><use href="#i-check"/></svg><span>Assignments</span><span class="nav-dot"></span></button>
+				<button class="nav-link" data-view="grades"><svg><use href="#i-chart"/></svg><span>Grades</span></button>
+				<button class="nav-link" data-view="messages"><svg><use href="#i-message"/></svg><span>Messages</span><span class="message-count">2</span></button>
+			</nav>
+
+			<div class="sidebar-bottom">
+				<div class="term-card">
+					<div class="term-card-top"><span>FALL TERM</span><span>62%</span></div>
+					<div class="term-progress"><span></span></div>
+					<p>You're finding your rhythm.<br>Keep showing up.</p>
+					<span class="term-spark" aria-hidden="true">✳</span>
+				</div>
+				<button class="profile-button" aria-label="Open profile">
+					<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=96&h=96&q=80" alt="Maya Chen">
+					<span class="profile-copy"><strong>Maya Chen</strong><span>Year 2 · Psychology</span></span>
+					<span class="profile-more">···</span>
+				</button>
+			</div>
+		</aside>
+
+		<main class="main-area">
+			<header class="topbar">
+				<button class="icon-button menu-button" id="menuButton" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button>
+				<div class="breadcrumb"><span>Northwood</span><span class="breadcrumb-slash">/</span><strong id="breadcrumbCurrent">Overview</strong></div>
+				<div class="topbar-actions">
+					<label class="search-box"><svg><use href="#i-search"/></svg><input id="globalSearch" type="search" placeholder="Search anything..." aria-label="Search portal"><kbd>⌘ K</kbd></label>
+					<button class="icon-button notification-button" id="notificationButton" aria-label="Notifications"><svg><use href="#i-bell"/></svg><span class="notification-dot"></span></button>
+					<button class="top-avatar" aria-label="Open profile"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=96&h=96&q=80" alt="Maya Chen"></button>
+				</div>
+			</header>
+
+			<div class="page-content">
+				<section class="welcome-row">
+					<div>
+						<p class="eyebrow" id="todayLabel">MONDAY, NOVEMBER 2</p>
+						<h1 id="pageTitle">A good day to <span>make progress.</span></h1>
+						<p class="welcome-subtitle" id="pageSubtitle">You have <strong>2 classes</strong> and <strong>3 things due</strong> this week. You're doing better than you think.</p>
+					</div>
+					<button class="primary-button" id="planButton"><svg><use href="#i-plus"/></svg> Plan study time</button>
+				</section>
+
+				<section class="stats-row" aria-label="Your learning statistics">
+					<article class="stat-item"><span class="stat-icon stat-icon-green"><svg><use href="#i-book"/></svg></span><div><span class="stat-label">ACTIVE COURSES</span><strong>4 <small>this term</small></strong></div></article>
+					<article class="stat-item"><span class="stat-icon stat-icon-yellow"><svg><use href="#i-check"/></svg></span><div><span class="stat-label">TASKS COMPLETED</span><strong>18 <small>of 24</small></strong></div><span class="stat-trend">↗ 12%</span></article>
+					<article class="stat-item"><span class="stat-icon stat-icon-coral"><svg><use href="#i-chart"/></svg></span><div><span class="stat-label">CURRENT GPA</span><strong>3.82 <small>/ 4.0</small></strong></div><span class="gpa-stars" aria-label="Excellent">✳</span></article>
+				</section>
+
+				<div id="dashboardView">
+					<div class="section-heading"><div><p class="section-kicker">PICK UP WHERE YOU LEFT OFF</p><h2>Your courses</h2></div><button class="text-button" data-open-view="courses">All courses <svg><use href="#i-arrow"/></svg></button></div>
+					<section class="course-grid" aria-label="Current courses">
+						<article class="course-card" data-searchable="psychology human behavior mind research dr lee">
+							<div class="course-image course-image-psych"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85" alt="Sunlit university study room"><span class="course-code">PSY 204</span><button class="course-menu" aria-label="Psychology course options">···</button></div>
+							<div class="course-card-body"><div class="course-title-row"><div><h3>Human Behavior</h3><p>Dr. Olivia Lee <span>·</span> 3 credits</p></div><span class="course-grade grade-a">A</span></div><div class="course-progress-label"><span>Course progress</span><strong>72%</strong></div><div class="course-progress"><span style="width:72%"></span></div><button class="continue-link" data-course="Human Behavior">Continue learning <svg><use href="#i-arrow"/></svg></button></div>
+						</article>
+						<article class="course-card" data-searchable="biology ecosystems climate earth lab professor rivera">
+							<div class="course-image course-image-bio"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=85" alt="Misty green mountain landscape"><span class="course-code">BIO 118</span><button class="course-menu" aria-label="Ecology course options">···</button></div>
+							<div class="course-card-body"><div class="course-title-row"><div><h3>Ecology &amp; Earth</h3><p>Prof. A. Rivera <span>·</span> 4 credits</p></div><span class="course-grade grade-b">B+</span></div><div class="course-progress-label"><span>Course progress</span><strong>48%</strong></div><div class="course-progress bio-progress"><span style="width:48%"></span></div><button class="continue-link" data-course="Ecology & Earth">Continue learning <svg><use href="#i-arrow"/></svg></button></div>
+						</article>
+					</section>
+
+					<div class="lower-grid">
+						<section class="panel assignments-panel">
+							<div class="panel-heading"><div><p class="section-kicker">DON'T LET IT SNEAK UP</p><h2>Coming up</h2></div><button class="text-button" data-open-view="assignments">See all <svg><use href="#i-arrow"/></svg></button></div>
+							<div class="assignment-list">
+								<article class="assignment-item" data-searchable="research reflection human behavior psychology essay">
+									<span class="assignment-symbol assignment-symbol-lime">✎</span><div class="assignment-copy"><strong>Research reflection</strong><span>Human Behavior <i>·</i> Essay</span></div><span class="due-date due-soon"><span></span>Today</span>
+								</article>
+								<article class="assignment-item" data-searchable="field notes ecosystem ecology lab journal">
+									<span class="assignment-symbol assignment-symbol-peach">⌁</span><div class="assignment-copy"><strong>Field notes: ecosystem</strong><span>Ecology &amp; Earth <i>·</i> Lab journal</span></div><span class="due-date">Nov 04</span>
+								</article>
+								<article class="assignment-item" data-searchable="statistics quiz data methods quiz">
+									<span class="assignment-symbol assignment-symbol-blue">▤</span><div class="assignment-copy"><strong>Statistics, quiz 3</strong><span>Data &amp; Methods <i>·</i> Quiz</span></div><span class="due-date">Nov 06</span>
+								</article>
+							</div>
+						</section>
+
+						<section class="panel schedule-panel">
+							<div class="panel-heading"><div><p class="section-kicker">YOUR NEXT CLASS</p><h2>This week</h2></div><button class="text-button" data-open-view="schedule">Full schedule <svg><use href="#i-arrow"/></svg></button></div>
+							<div class="next-class"><div class="class-day"><strong>03</strong><span>TUE</span></div><div class="class-info"><strong>Research Methods</strong><span>Hawthorne Hall <i>·</i> Room 204</span><small><svg><use href="#i-clock"/></svg> 10:30 – 11:45 AM</small></div><span class="class-dot"></span></div>
+							<div class="schedule-divider"></div>
+							<div class="week-strip" aria-label="Week of November 2"><span><b>MON</b><i>2</i></span><span class="week-today"><b>TUE</b><i>3</i></span><span><b>WED</b><i>4</i></span><span><b>THU</b><i>5</i></span><span><b>FRI</b><i>6</i></span></div>
+						</section>
+					</div>
+				</div>
+
+				<section id="workspaceView" class="workspace-view" hidden>
+					<div class="section-heading workspace-heading"><div><p class="section-kicker" id="workspaceKicker"></p><h2 id="workspaceTitle"></h2></div><button class="secondary-button" id="workspaceAction"><svg><use href="#i-plus"/></svg><span>New study plan</span></button></div>
+					<div id="workspaceContent"></div>
+				</section>
+				<p class="search-empty" id="searchEmpty" hidden>No matching items. Try another search.</p>
+				<footer class="page-footer"><span>Made for the in-between moments.</span><span>Need a hand? <a href="mailto:student-support@northwood.edu">Student support</a></span></footer>
+			</div>
+		</main>
+	</div>
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
+	<div class="mobile-overlay" id="mobileOverlay"></div>
+</body>
+</html>
